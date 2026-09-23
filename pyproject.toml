@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agentic-arxiv-rl-analysis"
+version = "0.1.0"
+description = "Reproducible analysis of SFT and GRPO experiments on AgenticArXiv-RL"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Project contributor" }]
+dependencies = []
+
+[project.scripts]
+agentic-arxiv-analysis = "agentic_arxiv_analysis.pipeline:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
